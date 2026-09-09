@@ -6,347 +6,337 @@
   <title>Arman Ali — Software Developer</title>
   <meta name="description" content="Portfolio of Arman Ali — Software Engineering Student building CLI tools, desktop applications, and automation with Python on Linux." />
   <meta name="author" content="Arman Ali" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#08080b" />
   <meta property="og:title" content="Arman Ali — Software Developer" />
   <meta property="og:description" content="Building efficient tools and automation with Python on Linux." />
   <meta property="og:type" content="website" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23000'/><text x='16' y='22' font-size='15' font-family='monospace' fill='%23a78bfa' text-anchor='middle'>&lt;/&gt;</text></svg>" type="image/svg+xml" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2308080b'/><path d='M19 10l6 6-6 6M13 10l-6 6 6 6' stroke='%238b7bff' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" type="image/svg+xml" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ═══════ Black Hole Background ═══════ -->
+
+  <!-- ═══════ Background layers ═══════ -->
   <div class="bg" aria-hidden="true">
-    <div class="bg__image"></div>
     <div class="bg__glow"></div>
-    <div class="bg__vignette"></div>
+    <div class="bg__grid"></div>
   </div>
+  <div class="grain" aria-hidden="true"></div>
 
   <!-- ═══════ Navigation ═══════ -->
-  <nav class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="#hero" class="nav__logo">&lt;<span>A</span>/&gt;</a>
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top" aria-label="Home">
+        <span class="nav__logo-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="nav__logo-name">Arman&nbsp;Ali</span>
+      </a>
 
-      <ul class="nav__links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#skills">Stack</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a class="nav__cta" href="mailto:itsarman.work@gmail.com">Let's Talk</a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- ═══════ Hero ═══════ -->
-  <section class="hero" id="hero">
-    <div class="container hero__content">
-      <p class="hero__eyebrow reveal">Hello, I'm</p>
-      <h1 class="hero__name reveal">
-        <span class="gradient-text">Arman Ali</span>.
-      </h1>
-      <p class="hero__tagline reveal">
-        Software Engineering Student &middot; Python Developer &middot; Linux Tinkerer
-      </p>
-      <p class="hero__desc reveal">
-        I build efficient CLI tools, automate daily workflows, and develop cross-platform
-        desktop applications using Python and PyQt6&nbsp;&mdash; running on Fedora&nbsp;GNOME.
-      </p>
-      <div class="hero__actions reveal">
-        <a href="#projects" class="btn btn--primary magnetic">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-          View Work
-        </a>
-        <a href="#contact" class="btn btn--outline magnetic">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Get in Touch
-        </a>
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu__links">
+      <a href="#about">About</a>
+      <a href="#skills">Stack</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="menu__cta" href="mailto:itsarman.work@gmail.com">Let's Talk</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ═══════ Hero ═══════ -->
+    <section class="hero">
+      <div class="container">
+        <p class="label hero__eyebrow">Software Engineering Student &mdash; 5th Semester</p>
+
+        <h1 class="hero__name">
+          <span class="line"><span class="line__inner">Arman</span></span>
+          <span class="line"><span class="line__inner grad">Ali</span></span>
+        </h1>
+
+        <div class="hero__role">
+          <span class="hero__role-text" id="typewriter"></span><span class="hero__caret" aria-hidden="true"></span>
+        </div>
+
+        <p class="hero__desc">
+          I build efficient CLI tools, automate daily workflows, and craft desktop
+          applications with Python&nbsp;&mdash; powered by Linux.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary magnetic" href="#work">
+            View My Work
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost magnetic" href="#contact">
+            Get in Touch
+          </a>
+        </div>
+
+        <ul class="hero__chips">
+          <li class="chip"><span class="chip__dot" style="--c:#86efac"></span>Open to internships</li>
+          <li class="chip"><span class="chip__dot" style="--c:#8b7bff"></span>Focused on Python</li>
+          <li class="chip"><span class="chip__dot" style="--c:#22d3ee"></span>Fedora GNOME</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════ Skills Marquee ═══════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Python</span><i></i><span>PyQt6</span><i></i><span>pywebview</span><i></i>
+        <span>Linux</span><i></i><span>Git &amp; GitHub</span><i></i><span>JavaScript</span><i></i>
+        <span>Automation</span><i></i><span>Shell</span><i></i><span>HTML / CSS</span><i></i><span>SQLite</span><i></i>
+        <span>requests</span><i></i><span>Fedora</span><i></i><span>GNOME</span><i></i>
+        <span>Python</span><i></i><span>PyQt6</span><i></i><span>pywebview</span><i></i>
+        <span>Linux</span><i></i><span>Git &amp; GitHub</span><i></i><span>JavaScript</span><i></i>
+        <span>Automation</span><i></i><span>Shell</span><i></i><span>HTML / CSS</span><i></i><span>SQLite</span><i></i>
+        <span>requests</span><i></i><span>Fedora</span><i></i><span>GNOME</span><i></i>
       </div>
     </div>
-    <div class="hero__scroll" aria-hidden="true">
-      <div class="hero__scroll-line"></div>
-    </div>
-  </section>
 
-  <!-- ═══════ About ═══════ -->
-  <section class="section" id="about">
-    <div class="container">
-      <span class="section__label reveal">Get to Know Me</span>
-      <h2 class="section__title reveal">About Me</h2>
-
-      <div class="about__grid">
-        <div class="about__text reveal">
-          <p>
-            I'm a <strong>5th-semester B.Tech Computer Science</strong> student with a deep
-            love for the command line and system-level problem solving. I spend most of my
-            time building <strong>Python CLI tools</strong>, developing <strong>desktop
-            applications with PyQt6</strong>, and automating everything I can get my hands on.
-          </p>
-          <p>
-            My journey started with tinkering&nbsp;&mdash; breaking and rebuilding Linux
-            installations until I understood every dotfile and system service. That curiosity
-            evolved into crafting utilities that save real time, from cross-platform file
-            managers to device sync tools.
-          </p>
+    <!-- ═══════ About ═══════ -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">/01</span>
+          <span class="label">About</span>
         </div>
+        <h2 class="section__title reveal">
+          Turning curiosity into<br /><span class="grad">useful software</span>
+        </h2>
 
-        <div class="about__current glass reveal">
-          <h3>Currently</h3>
-          <ul class="about__list">
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              Building desktop apps with PyQt6
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              Running Fedora GNOME
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              Automating daily workflows
-            </li>
-            <li>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#86efac" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              Exploring AI-assisted development
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ Skills ═══════ -->
-  <section class="section" id="skills">
-    <div class="container">
-      <span class="section__label reveal">What I Work With</span>
-      <h2 class="section__title reveal">Technical Base</h2>
-      <p class="section__subtitle reveal">
-        A snapshot of the technologies and tools I work with day to day.
-      </p>
-
-      <div class="skills__grid">
-        <!-- Languages -->
-        <div class="skill-card glass reveal">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-            Languages
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><span class="dot dot--green"></span>Python</span>
-            <span class="skill-tag"><span class="dot dot--green"></span>JavaScript</span>
-            <span class="skill-tag"><span class="dot dot--green"></span>HTML</span>
-            <span class="skill-tag"><span class="dot dot--green"></span>CSS</span>
-          </div>
-        </div>
-
-        <!-- Platforms & Tools -->
-        <div class="skill-card glass reveal">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-            Platforms &amp; Tools
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><span class="dot dot--cyan"></span>Fedora Linux</span>
-            <span class="skill-tag"><span class="dot dot--cyan"></span>GNOME</span>
-            <span class="skill-tag"><span class="dot dot--cyan"></span>Git &amp; GitHub</span>
-            <span class="skill-tag"><span class="dot dot--cyan"></span>Shell Scripting</span>
-          </div>
-        </div>
-
-        <!-- Frameworks & Libraries -->
-        <div class="skill-card glass reveal">
-          <h3>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
-            Frameworks &amp; Libraries
-          </h3>
-          <div class="skill-tags">
-            <span class="skill-tag"><span class="dot dot--purple"></span>PyQt6</span>
-            <span class="skill-tag"><span class="dot dot--cyan"></span>pywebview</span>
-            <span class="skill-tag"><span class="dot dot--green"></span>requests</span>
-            <span class="skill-tag"><span class="dot dot--purple"></span>sqlite3</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ Projects ═══════ -->
-  <section class="section" id="projects">
-    <div class="container">
-      <span class="section__label reveal">Selected Work</span>
-      <h2 class="section__title reveal">Projects</h2>
-      <p class="section__subtitle reveal">
-        Things I've built to solve real problems.
-      </p>
-
-      <div class="projects__grid">
-        <!-- Project 1 — Python File Manager -->
-        <a href="https://github.com/ArmanAli-git/python-file-manager"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="project-card glass reveal tilt"
-           aria-label="Python File Manager on GitHub">
-          <div class="project-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8"/>
-              <path d="M12 17v4"/>
-              <path d="M6 8l4 4-4 4"/>
-            </svg>
-          </div>
-          <h3>Python File Manager</h3>
-          <p>
-            A cross-platform CLI file manager with intuitive commands for organizing,
-            searching, and batch-processing files directly from the terminal.
-          </p>
-          <div class="project-card__tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">CLI</span>
-            <span class="project-tag">Cross-Platform</span>
-          </div>
-          <span class="project-card__link">View on GitHub <span class="arrow">&rarr;</span></span>
-        </a>
-
-        <!-- Project 2 — FileSyncTool -->
-        <a href="https://github.com/ArmanAli-git/FileSyncTool"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="project-card glass reveal tilt"
-           aria-label="FileSyncTool on GitHub">
-          <div class="project-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-              <path d="M3 3v5h5"/>
-              <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
-              <path d="M16 16h5v5"/>
-            </svg>
-          </div>
-          <h3>FileSyncTool</h3>
-          <p>
-            An all-platform file syncing tool with a clean web-based GUI for
-            seamless file synchronization across devices.
-          </p>
-          <div class="project-card__tags">
-            <span class="project-tag">Python</span>
-            <span class="project-tag">pywebview</span>
-            <span class="project-tag">HTML/CSS/JS</span>
-          </div>
-          <span class="project-card__link">View on GitHub <span class="arrow">&rarr;</span></span>
-        </a>
-
-        <!-- Project 3 — Dual-Boot Bluetooth Sync -->
-        <a href="https://github.com/ArmanAli-git/Dual-Boot-Bluetooth-Sync"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="project-card glass reveal tilt"
-           aria-label="Dual-Boot Bluetooth Sync on GitHub">
-          <div class="project-card__icon">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6.5 6.5l11 11L12 22V2l5.5 4.5-11 11"/>
-            </svg>
-          </div>
-          <h3>Dual-Boot Bluetooth Sync</h3>
-          <p>
-            A script to automatically fix Bluetooth pairing issues between
-            dual-boot systems, keeping your devices connected across OS switches.
-          </p>
-          <div class="project-card__tags">
-            <span class="project-tag">Bash</span>
-            <span class="project-tag">Linux</span>
-            <span class="project-tag">Bluetooth</span>
-          </div>
-          <span class="project-card__link">View on GitHub <span class="arrow">&rarr;</span></span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════ Passion & Contact ═══════ -->
-  <section class="section" id="contact">
-    <div class="container">
-      <div class="connect__grid">
-        <!-- Passion -->
-        <div class="passion glass reveal">
-          <span class="section__label">What Drives Me</span>
-          <h2 class="section__title">Passion</h2>
-          <p>
-            Beyond the code, I'm drawn to <strong>astronomy</strong> and the vastness
-            of the cosmos. From tracking exoplanet discoveries to understanding how
-            black holes shape galaxies, the universe keeps reminding me that the
-            biggest questions reward patient, systematic effort&nbsp;&mdash; the same
-            mindset I bring to building reliable software.
-          </p>
-          <p>
-            When I step away from the terminal, immersive story-driven games are my
-            way of unwinding&nbsp;&mdash; a reminder that great design is as much
-            about how it makes people feel as it is about how it works.
-          </p>
-          <div class="passion__quote">
-            <p>&ldquo;The universe is vast&nbsp;&mdash; there is always something new to understand.&rdquo;</p>
-          </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="contact-side">
-          <div class="reveal">
-            <span class="section__label">Reach Out</span>
-            <h2 class="section__title">Contact</h2>
+        <div class="grid-2-col">
+          <div class="prose reveal">
+            <p>
+              I'm a <strong>5th-semester B.Tech Computer Science</strong> student with a deep
+              love for the command line and system-level problem solving. I spend most of my
+              time building <strong>Python CLI tools</strong>, developing <strong>desktop
+              applications with PyQt6</strong>, and automating everything I can get my hands on.
+            </p>
+            <p>
+              My journey started with tinkering&nbsp;&mdash; breaking and rebuilding Linux
+              installations until I understood every dotfile and system service. That curiosity
+              evolved into crafting utilities that save real time, from cross-platform file
+              managers to device sync tools.
+            </p>
           </div>
 
-          <a href="mailto:itsarman.work@gmail.com"
-             class="contact-link glass reveal magnetic"
-             id="contact-email">
-            <div class="contact-link__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2"/>
-                <path d="M22 7l-10 6L2 7"/>
-              </svg>
+          <div class="panel currently reveal">
+            <span class="label">Currently</span>
+            <ul class="currently__list">
+              <li>Building desktop apps with PyQt6</li>
+              <li>Running Linux</li>
+              <li>Automating daily workflows</li>
+              <li>Exploring AI-assisted development</li>
+            </ul>
+            <div class="currently__rule"></div>
+            <div class="currently__meta">
+              <div><span class="label">Semester</span><p>5th</p></div>
+              <div><span class="label">Stack</span><p>Python-first</p></div>
+              <div><span class="label">Aim</span><p>Internships</p></div>
             </div>
-            <div class="contact-link__info">
-              <span class="contact-link__label">Email</span>
-              <span class="contact-link__value">itsarman.work@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Skills ═══════ -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">/02</span>
+          <span class="label">Technical Base</span>
+        </div>
+        <h2 class="section__title reveal">Everything I <span class="grad">work with</span></h2>
+
+        <div class="skills">
+          <div class="skill panel reveal">
+            <span class="skill__index">A</span>
+            <h3 class="skill__title">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--p)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Languages
+            </h3>
+            <ul class="skill__tags">
+              <li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li>
+            </ul>
+          </div>
+
+          <div class="skill panel reveal">
+            <span class="skill__index">B</span>
+            <h3 class="skill__title">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/><path d="M12 16v4"/></svg>
+              Platforms &amp; Tools
+            </h3>
+            <ul class="skill__tags">
+              <li>Fedora Linux</li><li>GNOME</li><li>Git &amp; GitHub</li><li>Shell&nbsp;<em>familiar</em></li>
+            </ul>
+          </div>
+
+          <div class="skill panel reveal">
+            <span class="skill__index">C</span>
+            <h3 class="skill__title">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+              Frameworks &amp; Libraries
+            </h3>
+            <ul class="skill__tags">
+              <li>PyQt6</li><li>pywebview</li><li>requests</li><li>sqlite3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Projects ═══════ -->
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">/03</span>
+          <span class="label">Selected Work</span>
+        </div>
+        <h2 class="section__title reveal">Projects I've <span class="grad">shipped</span></h2>
+
+        <div class="projects">
+          <!-- Project 1 -->
+          <a class="project panel tilt reveal" href="https://github.com/ArmanAli-git/python-file-manager" target="_blank" rel="noopener noreferrer" aria-label="Python File Manager on GitHub">
+            <div class="project__top">
+              <span class="project__index">01</span>
+              <span class="project__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--p)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h7l2 2h9v14H3z"/><path d="M9 13l3-3 3 3"/><path d="M12 10v7"/></svg>
+              </span>
+            </div>
+            <h3 class="project__title">Python File Manager</h3>
+            <p class="project__desc">
+              A cross-platform CLI file manager with intuitive commands for organizing,
+              searching, and batch-processing files straight from the terminal.
+            </p>
+            <div class="project__tags">
+              <span>Python</span><span>CLI</span><span>Cross-Platform</span>
+            </div>
+            <div class="project__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
             </div>
           </a>
 
-          <a href="https://github.com/ArmanAli-git"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="contact-link glass reveal magnetic"
-             id="contact-github">
-            <div class="contact-link__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-              </svg>
+          <!-- Project 2 -->
+          <a class="project panel tilt reveal" href="https://github.com/ArmanAli-git/FileSyncTool" target="_blank" rel="noopener noreferrer" aria-label="FileSyncTool on GitHub">
+            <div class="project__top">
+              <span class="project__index">02</span>
+              <span class="project__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="8" height="16" rx="2"/><rect x="14" y="4" width="8" height="16" rx="2"/><path d="M12 9l-2 3 2 3"/><path d="M12 15l2-3-2-3"/></svg>
+              </span>
             </div>
-            <div class="contact-link__info">
-              <span class="contact-link__label">GitHub</span>
-              <span class="contact-link__value">ArmanAli-git</span>
+            <h3 class="project__title">FileSyncTool</h3>
+            <p class="project__desc">
+              An all-platform file syncing tool with a clean web-based GUI
+              (pywebview) for seamless device-to-device synchronization.
+            </p>
+            <div class="project__tags">
+              <span>Python</span><span>pywebview</span><span>HTML/CSS/JS</span>
+            </div>
+            <div class="project__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+            </div>
+          </a>
+
+          <!-- Project 3 -->
+          <a class="project panel tilt reveal" href="https://github.com/ArmanAli-git/Dual-Boot-Bluetooth-Sync" target="_blank" rel="noopener noreferrer" aria-label="Dual-Boot Bluetooth Sync on GitHub">
+            <div class="project__top">
+              <span class="project__index">03</span>
+              <span class="project__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--pink)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 6.5l11 11L12 22V2l5.5 4.5-11 11"/></svg>
+              </span>
+            </div>
+            <h3 class="project__title">Dual-Boot Bluetooth Sync</h3>
+            <p class="project__desc">
+              A script that fixes Bluetooth pairing issues between dual-boot systems,
+              keeping your devices connected across OS switches.
+            </p>
+            <div class="project__tags">
+              <span>Bash</span><span>Linux</span><span>Bluetooth</span>
+            </div>
+            <div class="project__link">
+              View on GitHub
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
             </div>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ═══════ Passion & Contact ═══════ -->
+    <section class="section section--end" id="contact">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__num">/04</span>
+          <span class="label">Passion &amp; Contact</span>
+        </div>
+
+        <div class="grid-2-col">
+          <div class="panel passion reveal">
+            <h2 class="section__title passion__title">Beyond the code</h2>
+            <p>
+              I'm drawn to <strong>astronomy</strong> and the vastness of the cosmos.
+              From tracking exoplanet discoveries to understanding how black holes shape
+              galaxies, the universe keeps reminding me that the biggest questions reward
+              patient, systematic effort&nbsp;&mdash; the same mindset I bring to software.
+            </p>
+            <p>
+              And when I step away from the terminal, immersive story-driven games are my
+              way of unwinding&nbsp;&mdash; a reminder that great design is as much about
+              how it makes people feel as it is about how it works.
+            </p>
+          </div>
+
+          <div class="panel contact reveal">
+            <span class="label">Reach me at</span>
+            <a class="contact__email" href="mailto:itsarman.work@gmail.com">
+              itsarman.work@gmail.com
+            </a>
+            <div class="contact__row">
+              <a class="contact__pill magnetic" href="https://github.com/ArmanAli-git" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5a2.9 2.9 0 0 0-.8-2.2c3-.3 6.2-1.5 6.2-6.7a5 5 0 0 0-1.5-3.7 4.7 4.7 0 0 0-.1-3.7s-1.2-.4-4 1.5a13.7 13.7 0 0 0-7.6 0C4.7 2.5 3.5 2.9 3.5 2.9a4.7 4.7 0 0 0-.1 3.7 5 5 0 0 0-1.5 3.7c0 5.2 3.2 6.4 6.2 6.7a2.9 2.9 0 0 0-.8 2.2V22"/></svg>
+                GitHub&nbsp;&middot;&nbsp;ArmanAli-git
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ═══════ Footer ═══════ -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; <span id="year"></span> Arman Ali &middot; Crafted with curiosity and code.</p>
+    <div class="container footer__inner">
+      <p>&copy;&nbsp;<span id="year"></span> Arman Ali</p>
+      <p class="footer__tag">Designed &amp; built from scratch &mdash; curiosity-driven.</p>
     </div>
   </footer>
 
-  <!-- Script -->
   <script src="script.js"></script>
 </body>
 </html>
